@@ -1,0 +1,7 @@
+This project attempts to use local search methods to find very hard, solvable puzzle boards. The goal of the puzzle is to begin in the top-left corner of the board and make it to the bottom right corner in the minimum number of steps. Each position on the board has an integer assigned to it, this number determines the number of positions the player must traverse when moving from that position. Moves can only be vertical or horizontal. If a move would take the player off of the board, he cannot move in that direction.
+
+Puzzles are given scores based on the minimum distance from the start to the end, if the last point is unreachable a negative score is assigned. The negative score has magnitude equal to the number of unreachable points on the board. This problem is as such a maximization search problem.
+
+The puzzle size file includes a single integer in the set {5,7,9,11}. This determines the size of randomly generated puzzles should you choose to do so.
+
+The test.txt file is where one should manually input puzzles. The format of the file should be a single number representing the size of the puzzle in the first line followed by a newline. The rest of the file should draw the board by giving integers separated by spacebars with lines ending in newlines. An example is given.
